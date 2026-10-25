@@ -1,5 +1,5 @@
 -- ==============================================================================
--- INVENTÁRIO TI - SCHEMA PARA SUPABASE (PostgreSQL + Realtime)
+-- INVBECS - SCHEMA PARA SUPABASE (PostgreSQL + Realtime)
 -- Instruções:
 -- 1. Acesse o painel do Supabase (https://supabase.com/dashboard)
 -- 2. Entre no seu projeto e clique em "SQL Editor" no menu lateral esquerdo

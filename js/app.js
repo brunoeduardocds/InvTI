@@ -1083,12 +1083,12 @@ function loadConfiguracoes() {
   // Populate Supabase settings fields
   const sbUrlInp = document.getElementById('supabaseUrlInput');
   const sbKeyInp = document.getElementById('supabaseKeyInput');
-  if (sbUrlInp) sbUrlInp.value = localStorage.getItem('invti_supabase_url') || '';
-  if (sbKeyInp) sbKeyInp.value = localStorage.getItem('invti_supabase_anon_key') || '';
+  if (sbUrlInp) sbUrlInp.value = localStorage.getItem('invbecs_supabase_url') || localStorage.getItem('invti_supabase_url') || '';
+  if (sbKeyInp) sbKeyInp.value = localStorage.getItem('invbecs_supabase_anon_key') || localStorage.getItem('invti_supabase_anon_key') || '';
 
   if (typeof supabaseSync !== 'undefined') {
     const isConn = supabaseSync.isConnected;
-    const hasConfig = Boolean(localStorage.getItem('invti_supabase_url'));
+    const hasConfig = Boolean(localStorage.getItem('invbecs_supabase_url') || localStorage.getItem('invti_supabase_url'));
     supabaseSync.updateCloudStatusBadge(
       isConn ? 'connected' : (hasConfig ? 'connecting' : 'local'),
       isConn ? 'Nuvem Ativa' : (hasConfig ? 'Conectando...' : 'Modo Local')
@@ -1176,7 +1176,7 @@ function abrirModalSQLSupabase() {
   const textarea = document.getElementById('sqlSupabaseContent');
   if (textarea) {
     textarea.value = `-- ==============================================================================
--- INVENTÁRIO TI - SCHEMA PARA SUPABASE (PostgreSQL + Realtime)
+-- INVBECS - SCHEMA PARA SUPABASE (PostgreSQL + Realtime)
 -- Instruções: Cole no "SQL Editor" do Supabase e clique em "Run"
 -- ==============================================================================
 
@@ -1550,7 +1550,7 @@ function exportarBackup() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `InvTI_Backup_${new Date().toISOString().replace(/[:.]/g,'-')}.json`;
+  a.download = `Invbecs_Backup_${new Date().toISOString().replace(/[:.]/g,'-')}.json`;
   a.click();
   URL.revokeObjectURL(url);
   showToast('Backup exportado!', 'success');
@@ -1749,9 +1749,10 @@ function checkGarantias() {
 // ============================================
 // AUTENTICAÇÃO E SEGURANÇA AVANÇADA
 // ============================================
-const AUTH_SESSION_KEY = 'invti_session_token';
-const AUTH_ATTEMPTS_KEY = 'invti_failed_attempts';
-const AUTH_LOCKOUT_KEY = 'invti_lockout_until';
+const AUTH_SESSION_KEY = 'invbecs_session_token';
+const AUTH_ATTEMPTS_KEY = 'invbecs_failed_attempts';
+const AUTH_LOCKOUT_KEY = 'invbecs_lockout_until';
+const LEGACY_AUTH_SESSION_KEY = 'invti_session_token';
 
 let inactivityTimer = null;
 let lockoutInterval = null;
@@ -1822,7 +1823,7 @@ function checkLockout() {
 
 // ---- Verificação de Sessão Inicial ----
 function checkAuth() {
-  const sessionToken = sessionStorage.getItem(AUTH_SESSION_KEY);
+  const sessionToken = sessionStorage.getItem(AUTH_SESSION_KEY) || sessionStorage.getItem(LEGACY_AUTH_SESSION_KEY);
   const loginOverlay = document.getElementById('loginScreen');
 
   if (sessionToken) {
@@ -1907,6 +1908,7 @@ async function handleLogin(event) {
 // ---- Logout ----
 function handleLogout(isTimeout = false) {
   sessionStorage.removeItem(AUTH_SESSION_KEY);
+  sessionStorage.removeItem(LEGACY_AUTH_SESSION_KEY);
   stopInactivityTracker();
   document.body.classList.add('auth-locked');
 
@@ -2020,7 +2022,7 @@ async function salvarSeguranca() {
     }
 
     // Gera um novo salt criptográfico único para a nova senha
-    const newSalt = 'invti_salt_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
+    const newSalt = 'invbecs_salt_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);
     const newHash = await hashPassword(novaSenha, newSalt);
 
     authConfig.salt = newSalt;

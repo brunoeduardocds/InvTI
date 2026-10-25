@@ -2,9 +2,12 @@
 // SUPABASE SYNC MODULE - Sincronização em Nuvem e Tempo Real (Multi-dispositivo)
 // ==============================================================================
 
-const SUPABASE_STORAGE_URL_KEY = 'invti_supabase_url';
-const SUPABASE_STORAGE_ANON_KEY = 'invti_supabase_anon_key';
-const SUPABASE_STORAGE_ENABLED = 'invti_supabase_enabled';
+const SUPABASE_STORAGE_URL_KEY = 'invbecs_supabase_url';
+const SUPABASE_STORAGE_ANON_KEY = 'invbecs_supabase_anon_key';
+const SUPABASE_STORAGE_ENABLED = 'invbecs_supabase_enabled';
+const LEGACY_STORAGE_URL_KEY = 'invti_supabase_url';
+const LEGACY_STORAGE_ANON_KEY = 'invti_supabase_anon_key';
+const LEGACY_STORAGE_ENABLED = 'invti_supabase_enabled';
 
 const supabaseSync = {
   client: null,
@@ -14,9 +17,9 @@ const supabaseSync = {
 
   // Inicializa o cliente e testa conexão se configurado
   async init() {
-    const url = localStorage.getItem(SUPABASE_STORAGE_URL_KEY);
-    const key = localStorage.getItem(SUPABASE_STORAGE_ANON_KEY);
-    const enabled = localStorage.getItem(SUPABASE_STORAGE_ENABLED) !== 'false';
+    const url = localStorage.getItem(SUPABASE_STORAGE_URL_KEY) || localStorage.getItem(LEGACY_STORAGE_URL_KEY);
+    const key = localStorage.getItem(SUPABASE_STORAGE_ANON_KEY) || localStorage.getItem(LEGACY_STORAGE_ANON_KEY);
+    const enabled = (localStorage.getItem(SUPABASE_STORAGE_ENABLED) || localStorage.getItem(LEGACY_STORAGE_ENABLED)) !== 'false';
 
     this.updateCloudStatusBadge('connecting', 'Conectando...');
 
@@ -146,6 +149,8 @@ const supabaseSync = {
     }
     localStorage.removeItem(SUPABASE_STORAGE_URL_KEY);
     localStorage.removeItem(SUPABASE_STORAGE_ANON_KEY);
+    localStorage.removeItem(LEGACY_STORAGE_URL_KEY);
+    localStorage.removeItem(LEGACY_STORAGE_ANON_KEY);
     localStorage.setItem(SUPABASE_STORAGE_ENABLED, 'false');
     this.client = null;
     this.isConnected = false;
@@ -162,7 +167,7 @@ const supabaseSync = {
     }
 
     this.subscription = this.client
-      .channel('invti-realtime-changes')
+      .channel('invbecs-realtime-changes')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'equipamentos' }, (payload) => {
         this.handleRemoteChange('equipamentos', payload);
       })

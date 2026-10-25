@@ -1,2 +1,2 @@
-# InvTI
-Sistema de gestao de TI
+# Invbecs
+Sistema de Gestão de Ativos e Inventário de TI

@@ -2,13 +2,14 @@
 // DATA LAYER - localStorage persistence
 // ============================================
 
-const DB_KEY = 'invti_db';
+const DB_KEY = 'invbecs_db';
+const LEGACY_DB_KEY = 'invti_db';
 
 // Configurações e Hash padrão para o primeiro acesso (admin / 123)
 const DEFAULT_AUTH = {
   usuario: 'admin',
-  salt: 'invti_salt_v1',
-  hash: 'b4724b10ba45427645589b0a0efd3b583189f80354cc78fe0766e396741532b9', // SHA-256 de ('123' + salt)
+  salt: 'invbecs_salt_v1',
+  hash: 'fe58001e3d438478a9fe8f53db8dd7420dd80794a6750eb7cae472a4b53b9891', // SHA-256 de ('123' + salt)
   autoLogoutMinutes: 15
 };
 
@@ -33,7 +34,7 @@ const DEFAULT_DB = {
 };
 
 // Função criptográfica nativa para gerar hash SHA-256 com salt
-async function hashPassword(plainText, salt = 'invti_salt_v1') {
+async function hashPassword(plainText, salt = 'invbecs_salt_v1') {
   const enc = new TextEncoder();
   const data = enc.encode(plainText + (salt || ''));
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
@@ -43,7 +44,15 @@ async function hashPassword(plainText, salt = 'invti_salt_v1') {
 
 function loadDB() {
   try {
-    const raw = localStorage.getItem(DB_KEY);
+    let raw = localStorage.getItem(DB_KEY);
+    // Migração suave do banco anterior se existir
+    if (!raw) {
+      const legacyRaw = localStorage.getItem(LEGACY_DB_KEY);
+      if (legacyRaw) {
+        raw = legacyRaw;
+        localStorage.setItem(DB_KEY, legacyRaw);
+      }
+    }
     if (!raw) return JSON.parse(JSON.stringify(DEFAULT_DB));
     const db = JSON.parse(raw);
     // Merge missing keys from DEFAULT_DB

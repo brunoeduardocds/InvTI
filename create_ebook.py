@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Script de Geração do E-book em PDF:
-InvTI — Manual Completo de Engenharia de Software e Gestão de TI
+Invbecs — Manual Completo de Engenharia de Software e Gestão de TI
 """
 
 import os
@@ -28,7 +28,7 @@ def main():
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>InvTI — Manual Completo de Engenharia e Gestão de TI</title>
+<title>Invbecs — Manual Completo de Engenharia e Gestão de TI</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
 
@@ -490,12 +490,12 @@ def main():
   <div class="cover-container">
     <div class="cover-top">
       <div class="cover-badge">Engenharia de Software &amp; Infraestrutura</div>
-      <h1 class="cover-title">InvTI — Sistema de Gestão de Ativos</h1>
+      <h1 class="cover-title">Invbecs — Sistema de Gestão de Ativos</h1>
       <p class="cover-subtitle">Livro Oficial &amp; Manual de Arquitetura: Da Concepção à Implementação com Criptografia SHA-256 e Paradigma Local-First</p>
     </div>
 
     <div class="cover-image-box">
-      <img src="data:image/jpeg;base64,{cover_b64}" alt="Capa InvTI" />
+      <img src="data:image/jpeg;base64,{cover_b64}" alt="Capa Invbecs" />
     </div>
 
     <div class="cover-footer">
@@ -516,12 +516,12 @@ def main():
   <!-- ================= FICHA TÉCNICA ================= -->
   <div class="meta-page">
     <h2 style="font-size: 16pt; margin-top: 0; color: #0f172a;">Ficha Técnica &amp; Apresentação</h2>
-    <p>Este documento constitui o manual técnico e guia de arquitetura oficial do <strong>InvTI — Sistema de Gestão de Ativos de TI</strong>. Projetado no formato de E-book, tem o propósito de fornecer clareza conceitual, metodológica e prática para desenvolvedores, analistas de infraestrutura, auditores e gestores de tecnologia.</p>
+    <p>Este documento constitui o manual técnico e guia de arquitetura oficial do <strong>Invbecs — Sistema de Gestão de Ativos de TI</strong>. Projetado no formato de E-book, tem o propósito de fornecer clareza conceitual, metodológica e prática para desenvolvedores, analistas de infraestrutura, auditores e gestores de tecnologia.</p>
 
     <div class="meta-box">
       <div class="meta-grid">
         <div class="meta-label">Título da Obra:</div>
-        <div class="meta-value"><strong>InvTI — Livro Oficial de Engenharia e Gestão de TI</strong></div>
+        <div class="meta-value"><strong>Invbecs — Livro Oficial de Engenharia e Gestão de TI</strong></div>
 
         <div class="meta-label">Versão do Sistema:</div>
         <div class="meta-value">v2.1 (Edição Nuvem com Supabase Realtime &amp; Mobile Ready)</div>
@@ -536,7 +536,7 @@ def main():
         <div class="meta-value">SPA Híbrida: Local-First com Sincronização em Nuvem (Supabase PostgreSQL + Realtime)</div>
 
         <div class="meta-label">Armazenamento:</div>
-        <div class="meta-value">Híbrido — LocalStorage (chave <code>invti_db</code>) + PostgreSQL Supabase na Nuvem com Sincronização em Tempo Real (Realtime)</div>
+        <div class="meta-value">Híbrido — LocalStorage (chave <code>invbecs_db</code>) + PostgreSQL Supabase na Nuvem com Sincronização em Tempo Real (Realtime)</div>
 
         <div class="meta-label">Data de Publicação:</div>
         <div class="meta-value">Outubro de 2026</div>
@@ -544,7 +544,7 @@ def main():
     </div>
 
     <h3>Manifesto do Projeto</h3>
-    <p>O InvTI foi desenvolvido sob a premissa fundamental de <strong>simplicidade radical aliada a robustez técnica</strong>. Em um cenário corporativo onde soluções de mercado impõem custos proibitivos de licenciamento em nuvem, dependência contínua de internet e complexidade operacional, o InvTI prova que é perfeitamente viável entregar governança patrimonial de classe empresarial rodando de forma 100% autônoma, segura e veloz no próprio dispositivo do usuário, além de permitir conexão instantânea com bancos de dados em nuvem para uso sincronizado no celular e em múltiplos computadores.</p>
+    <p>O Invbecs foi desenvolvido sob a premissa fundamental de <strong>simplicidade radical aliada a robustez técnica</strong>. Em um cenário corporativo onde soluções de mercado impõem custos proibitivos de licenciamento em nuvem, dependência contínua de internet e complexidade operacional, o Invbecs prova que é perfeitamente viável entregar governança patrimonial de classe empresarial rodando de forma 100% autônoma, segura e veloz no próprio dispositivo do usuário, além de permitir conexão instantânea com bancos de dados em nuvem para uso sincronizado no celular e em múltiplos computadores.</p>
 
     <div class="callout callout-info">
       <div class="callout-title">💡 Como tirar o melhor proveito deste E-book</div>
@@ -732,7 +732,7 @@ def main():
     </ul>
 
     <h2>1.2 Requisitos Funcionais e Dores Resolvidas</h2>
-    <p>O <strong>InvTI</strong> foi arquitetado especificamente para erradicar esses problemas através de uma interface intuitiva, segura e centralizada. Seus objetivos primordiais foram delineados em quatro pilares:</p>
+    <p>O <strong>Invbecs</strong> foi arquitetado especificamente para erradicar esses problemas através de uma interface intuitiva, segura e centralizada. Seus objetivos primordiais foram delineados em quatro pilares:</p>
 
     <div class="tech-grid">
       <div class="tech-card">
@@ -762,7 +762,7 @@ def main():
     </div>
 
     <h2>2.1 Filosofia Local-First &amp; Zero Backend</h2>
-    <p>A decisão de projetar o InvTI como uma aplicação <strong>Local-First</strong> (onde os dados residem prioritariamente no dispositivo do usuário) foi deliberada. Diferente de aplicações Web tradicionais que demandam servidores Node.js, contêineres Docker, bancos PostgreSQL e conexões de rede obrigatórias, o InvTI opera de modo <strong>completamente autônomo</strong>.</p>
+    <p>A decisão de projetar o Invbecs como uma aplicação <strong>Local-First</strong> (onde os dados residem prioritariamente no dispositivo do usuário) foi deliberada. Diferente de aplicações Web tradicionais que demandam servidores Node.js, contêineres Docker, bancos PostgreSQL e conexões de rede obrigatórias, o Invbecs opera de modo <strong>completamente autônomo</strong>.</p>
 
     <div class="callout callout-success">
       <div class="callout-title">⚡ Benefícios da Arquitetura Local-First</div>
@@ -772,15 +772,15 @@ def main():
     </div>
 
     <h2>2.2 O Diagrama de Arquitetura em Camadas</h2>
-    <p>Abaixo apresentamos o infográfico conceitual de arquitetura do InvTI, demonstrando o fluxo seguro de dados, a barreira de autenticação, o motor analítico e a camada de persistência local:</p>
+    <p>Abaixo apresentamos o infográfico conceitual de arquitetura do Invbecs, demonstrando o fluxo seguro de dados, a barreira de autenticação, o motor analítico e a camada de persistência local:</p>
 
     <div class="diagram-box">
-      <img src="data:image/jpeg;base64,{arch_b64}" alt="Diagrama de Arquitetura do InvTI" />
-      <div class="diagram-caption">Figura 2.1 — Diagrama de Arquitetura do Sistema InvTI (Camadas de Apresentação, Criptografia, Serviços e Armazenamento).</div>
+      <img src="data:image/jpeg;base64,{arch_b64}" alt="Diagrama de Arquitetura do Invbecs" />
+      <div class="diagram-caption">Figura 2.1 — Diagrama de Arquitetura do Sistema Invbecs (Camadas de Apresentação, Criptografia, Serviços e Armazenamento).</div>
     </div>
 
     <h2>2.3 Design System: Dark Mode Premium &amp; Tokens CSS</h2>
-    <p>O InvTI adota uma estética contemporânea <em>Dark Mode Premium</em>, inspirada nos mais sofisticados consoles de observabilidade e monitoramento de datacenter. O código foi totalmente construído com <strong>Variáveis Nativas CSS (Design Tokens)</strong>, facilitando manutenções e consistência visual.</p>
+    <p>O Invbecs adota uma estética contemporânea <em>Dark Mode Premium</em>, inspirada nos mais sofisticados consoles de observabilidade e monitoramento de datacenter. O código foi totalmente construído com <strong>Variáveis Nativas CSS (Design Tokens)</strong>, facilitando manutenções e consistência visual.</p>
 
     <table>
       <thead>
@@ -833,9 +833,9 @@ def main():
     </div>
 
     <h2>3.1 O Schema Relacional no LocalStorage</h2>
-    <p>Toda a inteligência do sistema converge para a biblioteca central <code>js/data.js</code>. O InvTI implementa um banco de dados relacional baseado em documentos JSON gravado sob a chave segura <code>invti_db</code> no <code>localStorage</code> do navegador.</p>
+    <p>Toda a inteligência do sistema converge para a biblioteca central <code>js/data.js</code>. O Invbecs implementa um banco de dados relacional baseado em documentos JSON gravado sob a chave segura <code>invbecs_db</code> no <code>localStorage</code> do navegador.</p>
 
-    <pre><code><span class="cm">// Estrutura Canônica do Banco de Dados InvTI (Schema JSON)</span>
+    <pre><code><span class="cm">// Estrutura Canônica do Banco de Dados Invbecs (Schema JSON)</span>
 <span class="kw">const</span> <span class="vr">DEFAULT_DB</span> = {{
   <span class="vr">equipamentos</span>: [],    <span class="cm">// ID, patrimônio, serial, categoria, valor, garantia...</span>
   <span class="vr">colaboradores</span>: [],   <span class="cm">// ID, nome, cargo, setor, e-mail, telefone...</span>
@@ -852,7 +852,7 @@ def main():
 }};</code></pre>
 
     <h2>3.2 Tolerância a Falhas e Auto-Recuperação</h2>
-    <p>Um desafio clássico do armazenamento local é a compatibilidade retroativa: se uma versão nova do sistema adiciona uma funcionalidade (por exemplo, configurações de segurança), bases antigas poderiam quebrar. Para solucionar isso de forma elegante, o InvTI implementa um algoritmo de <strong>fusão de schema inteligente (Schema Merging)</strong> dentro da rotina <code>loadDB()</code>:</p>
+    <p>Um desafio clássico do armazenamento local é a compatibilidade retroativa: se uma versão nova do sistema adiciona uma funcionalidade (por exemplo, configurações de segurança), bases antigas poderiam quebrar. Para solucionar isso de forma elegante, o Invbecs implementa um algoritmo de <strong>fusão de schema inteligente (Schema Merging)</strong> dentro da rotina <code>loadDB()</code>:</p>
 
     <pre><code><span class="kw">function</span> <span class="fn">loadDB</span>() {{
   <span class="kw">try</span> {{
@@ -886,7 +886,7 @@ def main():
     </div>
 
     <h2>4.1 Criptografia SHA-256 com Salt Dinâmico</h2>
-    <p>A segurança do InvTI foi levada ao estado da arte. Em sistemas legados é comum encontrar senhas salvas em texto puro no código ou no navegador. No InvTI, a senha nunca transita ou permanece descriptografada em nenhum arquivo ou registro.</p>
+    <p>A segurança do Invbecs foi levada ao estado da arte. Em sistemas legados é comum encontrar senhas salvas em texto puro no código ou no navegador. No Invbecs, a senha nunca transita ou permanece descriptografada em nenhum arquivo ou registro.</p>
 
     <p>Utilizamos a biblioteca nativa do navegador <strong>Web Crypto API</strong> (<code>window.crypto.subtle</code>), que executa primitivas criptográficas compiladas em código de máquina de altíssimo desempenho:</p>
 
@@ -905,7 +905,7 @@ def main():
     </div>
 
     <h2>4.2 Blindagem DOM Zero-Leakage (Estado <code>auth-locked</code>)</h2>
-    <p>Um dos erros mais comuns em interfaces web é renderizar o HTML confidencial e apenas colocar um pop-up por cima. Qualquer usuário com a tecla F12 aberta poderia inspecionar os elementos ou deletar o pop-up para ver os dados. O InvTI resolveu isso com a arquitetura <strong>Zero-Leakage</strong>:</p>
+    <p>Um dos erros mais comuns em interfaces web é renderizar o HTML confidencial e apenas colocar um pop-up por cima. Qualquer usuário com a tecla F12 aberta poderia inspecionar os elementos ou deletar o pop-up para ver os dados. O Invbecs resolveu isso com a arquitetura <strong>Zero-Leakage</strong>:</p>
     <ul>
       <li>O elemento <code>&lt;body&gt;</code> é carregado com a classe <code>class="auth-locked"</code> por padrão;</li>
       <li>Regras CSS de alta prioridade (<code>display: none !important</code>) ocultam integralmente a sidebar, o conteúdo e os modais;</li>
@@ -916,7 +916,7 @@ def main():
     <p>Para barrar tentativas exaustivas de adivinhação de senha, o sistema monitora erros sucessivos. Caso um usuário erre <strong>5 tentativas consecutivas</strong>, a tela de login dispara o travamento de segurança (Lockout) por <strong>30 segundos</strong>, exibindo contagem regressiva em tempo real e desabilitando os botões de envio.</p>
 
     <h2>4.4 Proteção de Sessão Abandonada (Auto-Logout)</h2>
-    <p>Caso o administrador precise se ausentar de sua estação de trabalho, o InvTI monitora eventos de interação (teclado, mouse e scroll). Transcorrido o período de inatividade configurado (ex.: 15 minutos), a sessão é automaticamente finalizada no <code>sessionStorage</code> e a tela de login é rearmada.</p>
+    <p>Caso o administrador precise se ausentar de sua estação de trabalho, o Invbecs monitora eventos de interação (teclado, mouse e scroll). Transcorrido o período de inatividade configurado (ex.: 15 minutos), a sessão é automaticamente finalizada no <code>sessionStorage</code> e a tela de login é rearmada.</p>
   </div>
 
   <!-- ================= CAPÍTULO 5 ================= -->
@@ -1002,7 +1002,7 @@ def main():
 └── 📁 docs_assets/      <span class="cm">// Recursos visuais, capa e diagramas técnicos</span></code></pre>
 
     <h2>6.2 O Mecanismo Reativo de Atualização de UI</h2>
-    <p>Diferente de frameworks pesados que utilizam Virtual DOM (como React ou Angular), o InvTI implementa um padrão direto e extremamente veloz de atualização reativa via função centralizadora <code>refreshAll()</code>:</p>
+    <p>Diferente de frameworks pesados que utilizam Virtual DOM (como React ou Angular), o Invbecs implementa um padrão direto e extremamente veloz de atualização reativa via função centralizadora <code>refreshAll()</code>:</p>
 
     <pre><code><span class="cm">// Atualização Global e Sincronizada da Interface</span>
 <span class="kw">function</span> <span class="fn">refreshAll</span>() {{
@@ -1045,7 +1045,7 @@ def main():
     </div>
 
     <h2>7.1 Arquitetura Híbrida: Local-First + Supabase Cloud</h2>
-    <p>Com a evolução para a versão <strong>v2.1</strong>, o InvTI atinge um dos maiores marcos da engenharia de software moderna: uma <strong>Arquitetura Híbrida Resiliente</strong>. O sistema preserva todas as vantagens do paradigma <em>Local-First</em> (velocidade instantânea de leitura/escrita no disco local, funcionamento 100% offline e privacidade total) e integra de forma nativa a potência do <strong>Supabase</strong>, uma plataforma de banco de dados relacional PostgreSQL serverless com suporte a WebSockets em tempo real.</p>
+    <p>Com a evolução para a versão <strong>v2.1</strong>, o Invbecs atinge um dos maiores marcos da engenharia de software moderna: uma <strong>Arquitetura Híbrida Resiliente</strong>. O sistema preserva todas as vantagens do paradigma <em>Local-First</em> (velocidade instantânea de leitura/escrita no disco local, funcionamento 100% offline e privacidade total) e integra de forma nativa a potência do <strong>Supabase</strong>, uma plataforma de banco de dados relacional PostgreSQL serverless com suporte a WebSockets em tempo real.</p>
 
     <div class="tech-grid">
       <div class="tech-card">
@@ -1067,7 +1067,7 @@ def main():
     </div>
 
     <h2>7.2 O Schema Relacional no PostgreSQL (<code>supabase_schema.sql</code>)</h2>
-    <p>Para suportar todo o ecossistema do InvTI na nuvem, foi projetado um schema relacional completo em PostgreSQL, disponibilizado no arquivo de infraestrutura <code>supabase_schema.sql</code>. As tabelas espelham perfeitamente as entidades de domínio da aplicação:</p>
+    <p>Para suportar todo o ecossistema do Invbecs na nuvem, foi projetado um schema relacional completo em PostgreSQL, disponibilizado no arquivo de infraestrutura <code>supabase_schema.sql</code>. As tabelas espelham perfeitamente as entidades de domínio da aplicação:</p>
 
     <ul>
       <li><strong><code>public.equipamentos</code>:</strong> Armazena patrimônio, descrição, categoria, marca, modelo, número de série, nota fiscal, datas de aquisição e garantia, valor contábil, responsável e localização física. Índices B-Tree cobrem <code>patrimonio</code>, <code>status</code>, <code>categoria</code> e <code>responsavel</code>;</li>
@@ -1079,7 +1079,7 @@ def main():
     </ul>
 
     <h2>7.3 Segurança na Nuvem: Row Level Security (RLS) &amp; Chaves Anon</h2>
-    <p>A segurança dos dados é garantida pelo mecanismo nativo do PostgreSQL chamado <strong>Row Level Security (RLS)</strong>. No Supabase, o InvTI conecta-se através da <strong>Chave Pública Anônima (<code>anon key</code>)</strong>, que concede permissão restrita de leitura e escrita às tabelas da aplicação sem jamais expor as credenciais de superusuário ou a chave mestra (<code>service_role</code>).</p>
+    <p>A segurança dos dados é garantida pelo mecanismo nativo do PostgreSQL chamado <strong>Row Level Security (RLS)</strong>. No Supabase, o Invbecs conecta-se através da <strong>Chave Pública Anônima (<code>anon key</code>)</strong>, que concede permissão restrita de leitura e escrita às tabelas da aplicação sem jamais expor as credenciais de superusuário ou a chave mestra (<code>service_role</code>).</p>
 
     <div class="callout callout-security">
       <div class="callout-title">🔒 Políticas RLS Ativas</div>
@@ -1091,27 +1091,27 @@ def main():
 
     <pre><code><span class="cm">// Subscrição em Tempo Real via WebSocket do Supabase</span>
 <span class="kw">this</span>.subscription = <span class="kw">this</span>.client
-  .<span class="fn">channel</span>(<span class="st">'invti-realtime-changes'</span>)
+  .<span class="fn">channel</span>(<span class="st">'invbecs-realtime-changes'</span>)
   .<span class="fn">on</span>(<span class="st">'postgres_changes'</span>, {{ event: <span class="st">'*'</span>, schema: <span class="st">'public'</span>, table: <span class="st">'equipamentos'</span> }}, (<span class="vr">payload</span>) => {{
     <span class="kw">this</span>.<span class="fn">handleRemoteChange</span>(<span class="st">'equipamentos'</span>, <span class="vr">payload</span>);
   }})
   .<span class="fn">subscribe</span>();</code></pre>
 
-    <p>Quando uma alteração remota é detectada (evento <code>INSERT</code>, <code>UPDATE</code> ou <code>DELETE</code>), o InvTI atualiza a memória local, grava no disco do navegador e invoca <code>refreshAll()</code>, exibindo uma notificação discreta na tela: <em>"Novo item recebido da nuvem!"</em>.</p>
+    <p>Quando uma alteração remota é detectada (evento <code>INSERT</code>, <code>UPDATE</code> ou <code>DELETE</code>), o Invbecs atualiza a memória local, grava no disco do navegador e invoca <code>refreshAll()</code>, exibindo uma notificação discreta na tela: <em>"Novo item recebido da nuvem!"</em>.</p>
 
     <h2>7.5 Guia Prático Passo a Passo de Configuração</h2>
-    <p>A configuração do Supabase no InvTI leva menos de 3 minutos e dispensa qualquer linha de comando:</p>
+    <p>A configuração do Supabase no Invbecs leva menos de 3 minutos e dispensa qualquer linha de comando:</p>
 
     <ol>
       <li><strong>Crie uma conta gratuita:</strong> Acesse <code>https://supabase.com</code> e clique em <em>"New Project"</em>. Selecione a região mais próxima (ex.: São Paulo - <code>sa-east-1</code>);</li>
-      <li><strong>Execute o Script SQL:</strong> No menu lateral esquerdo do Supabase, clique em <strong>SQL Editor</strong> (<code>&gt;_</code>) &gt; <em>"New query"</em>. Cole todo o conteúdo do arquivo <code>supabase_schema.sql</code> (ou clique no botão <em>"Ver Script SQL para o Supabase"</em> nas Configurações do InvTI) e clique em <strong>Run</strong>;</li>
+      <li><strong>Execute o Script SQL:</strong> No menu lateral esquerdo do Supabase, clique em <strong>SQL Editor</strong> (<code>&gt;_</code>) &gt; <em>"New query"</em>. Cole todo o conteúdo do arquivo <code>supabase_schema.sql</code> (ou clique no botão <em>"Ver Script SQL para o Supabase"</em> nas Configurações do Invbecs) e clique em <strong>Run</strong>;</li>
       <li><strong>Obtenha as Credenciais:</strong> No Supabase, vá em <strong>Project Settings</strong> (ícone de engrenagem) &gt; <strong>API</strong>. Copie a <strong>Project URL</strong> e a <strong>Project API Key (anon public)</strong>;</li>
-      <li><strong>Conecte no InvTI:</strong> Abra o InvTI, vá na aba <strong>Configurações &gt; Nuvem &amp; Sincronização em Tempo Real</strong>, cole a URL e a Chave e clique em <strong>Salvar &amp; Conectar</strong>;</li>
+      <li><strong>Conecte no Invbecs:</strong> Abra o Invbecs, vá na aba <strong>Configurações &gt; Nuvem &amp; Sincronização em Tempo Real</strong>, cole a URL e a Chave e clique em <strong>Salvar &amp; Conectar</strong>;</li>
       <li><strong>Migre seus Dados Locais:</strong> Clique no botão <strong>"⬆️ Subir Dados Locais para Nuvem"</strong>. Todo o seu inventário existente no computador será enviado para o Supabase em lote.</li>
     </ol>
 
     <h2>7.6 Acesso em Smartphones &amp; Instalação como App no Celular</h2>
-    <p>O InvTI foi construído com design totalmente responsivo, adaptando-se confortavelmente a telas de celulares e tablets:</p>
+    <p>O Invbecs foi construído com design totalmente responsivo, adaptando-se confortavelmente a telas de celulares e tablets:</p>
 
     <div class="tech-grid">
       <div class="tech-card">
@@ -1128,7 +1128,7 @@ def main():
       </div>
       <div class="tech-card">
         <div class="tech-card-title">📲 Instalação como Aplicativo</div>
-        <div class="tech-card-desc">No Chrome ou Safari do celular, toque em <em>"Adicionar à tela de início"</em>. O InvTI cria um ícone no smartphone e abre em tela cheia, como um app nativo.</div>
+        <div class="tech-card-desc">No Chrome ou Safari do celular, toque em <em>"Adicionar à tela de início"</em>. O Invbecs cria um ícone no smartphone e abre em tela cheia, como um app nativo.</div>
       </div>
     </div>
   </div>
@@ -1141,7 +1141,7 @@ def main():
     </div>
 
     <h2>8.1 Como Executar o Sistema em Qualquer Máquina</h2>
-    <p>O InvTI requer zero instalação prévia. Para iniciar o uso:</p>
+    <p>O Invbecs requer zero instalação prévia. Para iniciar o uso:</p>
     <ol>
       <li>Basta abrir a pasta do projeto no Windows Explorer;</li>
       <li>Dar um duplo clique no arquivo <code>index.html</code>;</li>
@@ -1152,12 +1152,12 @@ def main():
     <h2>8.2 Como Compartilhar em Rede Local (Intranet)</h2>
     <p>Se a equipe de suporte desejar que múltiplos computadores acessem a mesma aplicação dentro do escritório, existem duas opções práticas:</p>
     <ul>
-      <li><strong>Pasta Compartilhada Windows:</strong> Compartilhe a pasta do InvTI na rede com permissão de leitura;</li>
+      <li><strong>Pasta Compartilhada Windows:</strong> Compartilhe a pasta do Invbecs na rede com permissão de leitura;</li>
       <li><strong>Servidor Web Leve:</strong> Execute um micro-servidor estático no computador central (ex.: <code>python -m http.server 8080</code> ou servidor IIS/Nginx). Todos os computadores da rede poderão acessar via <code>http://ip-do-computador:8080</code>.</li>
     </ul>
 
     <h2>8.3 Publicação na Nuvem (Vercel, Netlify &amp; GitHub Pages)</h2>
-    <p>Por ser uma aplicação SPA estática de alta performance sem necessidade de build complexo, o InvTI pode ser publicado gratuitamente em provedores de Edge CDN globais:</p>
+    <p>Por ser uma aplicação SPA estática de alta performance sem necessidade de build complexo, o Invbecs pode ser publicado gratuitamente em provedores de Edge CDN globais:</p>
     <ul>
       <li><strong>Vercel:</strong> Arraste a pasta para o dashboard da Vercel ou use <code>npx vercel</code>. O deploy é concluído em menos de 10 segundos com certificado SSL automático;</li>
       <li><strong>GitHub Pages:</strong> Crie um repositório no GitHub, ative o Pages nas configurações e aponte para o branch <code>main</code>;</li>
@@ -1165,7 +1165,7 @@ def main():
     </ul>
 
     <h2>8.4 Roadmap de Evoluções Futuras</h2>
-    <p>Com a camada de nuvem Supabase já plenamente funcional na versão atual (v2.1), as próximas evoluções planejadas para o InvTI incluem:</p>
+    <p>Com a camada de nuvem Supabase já plenamente funcional na versão atual (v2.1), as próximas evoluções planejadas para o Invbecs incluem:</p>
     <div class="tech-grid">
       <div class="tech-card">
         <div class="tech-card-title">📱 Scanner de QR Code / Código de Barras pela Câmera</div>
@@ -1187,7 +1187,7 @@ def main():
 
     <div class="signature-box">
       <div>
-        <strong>InvTI — Sistema de Gestão de Ativos</strong><br>
+        <strong>Invbecs — Sistema de Gestão de Ativos</strong><br>
         Documento de Engenharia de Software aprovado para distribuição técnica.
       </div>
       <div style="text-align: right;">
@@ -1202,7 +1202,7 @@ def main():
 """
 
     html_file_path = os.path.join(base_dir, 'ebook_render.html')
-    output_pdf_path = os.path.join(base_dir, 'InvTI_Manual_Completo_Sistema_Ebook.pdf')
+    output_pdf_path = os.path.join(base_dir, 'Invbecs_Manual_Completo_Sistema_Ebook.pdf')
 
     with open(html_file_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
@@ -1211,7 +1211,7 @@ def main():
 
     # Template do Rodapé e Cabeçalho do Chrome
     footer_template = '''<div style="font-size: 8.5pt; width: 100%; display: flex; justify-content: space-between; padding: 0 16mm; color: #64748b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-  <span>InvTI — Livro Oficial &amp; Manual do Sistema</span>
+  <span>Invbecs — Livro Oficial &amp; Manual do Sistema</span>
   <span>Página <span class="pageNumber"></span> de <span class="totalPages"></span></span>
 </div>'''
 
@@ -1243,6 +1243,10 @@ def main():
     if os.path.exists(output_pdf_path):
         size_mb = os.path.getsize(output_pdf_path) / (1024 * 1024)
         print(f"Sucesso! PDF do E-book gerado: {output_pdf_path} ({size_mb:.2f} MB)")
+        legacy_pdf_path = os.path.join(base_dir, 'InvTI_Manual_Completo_Sistema_Ebook.pdf')
+        import shutil
+        shutil.copyfile(output_pdf_path, legacy_pdf_path)
+        print(f"Cópia retrocompatível atualizada em: {legacy_pdf_path}")
     else:
         print("Erro: PDF não foi gerado.")
         print("Stderr:", result.stderr)
